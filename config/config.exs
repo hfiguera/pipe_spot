@@ -12,6 +12,7 @@ config :pipe_spot,
 
 # Configures the endpoint
 config :pipe_spot, PipeSpotWeb.Endpoint,
+  adapter: Bandit.PhoenixAdapter,
   url: [host: "localhost"],
   render_errors: [
     formats: [html: PipeSpotWeb.ErrorHTML, json: PipeSpotWeb.ErrorJSON],

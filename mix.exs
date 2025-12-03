@@ -49,7 +49,7 @@ defmodule PipeSpot.MixProject do
       {:telemetry_poller, "~> 1.3"},
       {:gettext, "~> 1.0"},
       {:jason, "~> 1.4"},
-      {:plug_cowboy, "~> 2.7"},
+      {:bandit, "~> 1.8"},
       {:live_state, "~> 0.9.0"},
       {:cors_plug, "~> 3.0"}
     ]
