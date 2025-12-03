@@ -17,7 +17,7 @@ defmodule PipeSpotWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import PipeSpotWeb.Gettext
+  use Gettext, backend: PipeSpotWeb.Gettext
 
   @doc """
   Renders a modal.

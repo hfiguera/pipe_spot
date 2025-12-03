@@ -43,7 +43,7 @@ defmodule PipeSpotWeb do
         layouts: [html: PipeSpotWeb.Layouts]
 
       import Plug.Conn
-      import PipeSpotWeb.Gettext
+      use Gettext, backend: PipeSpotWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule PipeSpotWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import PipeSpotWeb.CoreComponents
-      import PipeSpotWeb.Gettext
+      use Gettext, backend: PipeSpotWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
