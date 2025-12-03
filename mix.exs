@@ -49,8 +49,8 @@ defmodule PipeSpot.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:live_state, "~> 0.6", path: "../live_state"},
-      {:cors_plug, ">= 0.0.0"}
+      {:live_state, "~> 0.9.0"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
