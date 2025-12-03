@@ -17,5 +17,4 @@ defmodule PipeSpotWeb.ContactFormChannel do
       {:error, _} -> {:noreply, state}
     end
   end
-
 end

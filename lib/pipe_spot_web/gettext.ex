@@ -5,7 +5,7 @@ defmodule PipeSpotWeb.Gettext do
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import PipeSpotWeb.Gettext
+      use Gettext, backend: PipeSpotWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule PipeSpotWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :pipe_spot
+  use Gettext.Backend, otp_app: :pipe_spot
 end

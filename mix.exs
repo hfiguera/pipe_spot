@@ -9,7 +9,8 @@ defmodule PipeSpot.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      listeners: [Phoenix.CodeReloader]
     ]
   end
 
@@ -32,25 +33,25 @@ defmodule PipeSpot.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.7.6"},
-      {:phoenix_ecto, "~> 4.4"},
+      {:phoenix, "~> 1.8"},
+      {:phoenix_ecto, "~> 4.7"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_html, "~> 3.3"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.19.0"},
+      {:phoenix_html, "~> 4.3"},
+      {:phoenix_live_reload, "~> 1.6", only: :dev},
+      {:phoenix_live_view, "~> 1.1"},
       {:floki, ">= 0.30.0", only: :test},
-      {:phoenix_live_dashboard, "~> 0.8.0"},
-      {:esbuild, "~> 0.7", runtime: Mix.env() == :dev},
+      {:phoenix_live_dashboard, "~> 0.8.7"},
+      {:esbuild, "~> 0.10.0", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
-      {:telemetry_metrics, "~> 0.6"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.20"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
-      {:live_state, "~> 0.6", path: "../live_state"},
-      {:cors_plug, ">= 0.0.0"}
+      {:telemetry_metrics, "~> 1.1"},
+      {:telemetry_poller, "~> 1.3"},
+      {:gettext, "~> 1.0"},
+      {:jason, "~> 1.4"},
+      {:plug_cowboy, "~> 2.7"},
+      {:live_state, "~> 0.9.0"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
