@@ -26,7 +26,8 @@ config :pipe_spot, PipeSpotWeb.Endpoint,
   secret_key_base: "dmBDPpyAQOobOYRc/ml83xRJKqVziVCrz6ByuHkRcfR3iLwhdVbdJ1YLM+mSzU2i",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
-    esbuild_custom_elements: {Esbuild, :install_and_run, [:custom_elements, ~w(--sourcemap=inline --watch)]},
+    esbuild_custom_elements:
+      {Esbuild, :install_and_run, [:custom_elements, ~w(--sourcemap=inline --watch)]}
   ]
 
 # ## SSL Support

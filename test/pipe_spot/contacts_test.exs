@@ -35,7 +35,12 @@ defmodule PipeSpot.ContactsTest do
 
     test "update_contact/2 with valid data updates the contact" do
       contact = contact_fixture()
-      update_attrs = %{email: "some updated email", name: "some updated name", phone_number: "some updated phone_number"}
+
+      update_attrs = %{
+        email: "some updated email",
+        name: "some updated name",
+        phone_number: "some updated phone_number"
+      }
 
       assert {:ok, %Contact{} = contact} = Contacts.update_contact(contact, update_attrs)
       assert contact.email == "some updated email"
