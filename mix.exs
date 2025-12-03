@@ -49,7 +49,7 @@ defmodule PipeSpot.MixProject do
       {:telemetry_poller, "~> 1.3"},
       {:gettext, "~> 1.0"},
       {:jason, "~> 1.4"},
-      {:plug_cowboy, "~> 2.7"},
+      {:bandit, "~> 1.8"},
       {:live_state, "~> 0.9.0"},
       {:cors_plug, "~> 3.0"}
     ]
@@ -67,7 +67,7 @@ defmodule PipeSpot.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.setup": ["esbuild.install --if-missing"],
+      "assets.setup": ["cmd --cd assets npm install", "esbuild.install --if-missing"],
       "assets.build": ["esbuild default"],
       "assets.deploy": ["esbuild default --minify", "phx.digest"]
     ]
